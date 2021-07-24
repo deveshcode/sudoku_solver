@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+  <body>
+  <span class="align-middle">
+      <div class="container">
+        <table border = 1 class="table table-striped" style="margin-top:10%;text-align:center;">
+          {% for key, value in result.items() %}
+            <tr>
+              <th> {{ key }} </th>
+              <td> {{ value }} </td>
+            </tr>
+          {% endfor %}
+        </table>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('users') }}">Home</a></li>
+                <li><a href="{{ url_for('home') }}">Portal</a></li>
+            </ul>
+        </nav>
+      </div>
+  </span>
+  </body>
+</html>
